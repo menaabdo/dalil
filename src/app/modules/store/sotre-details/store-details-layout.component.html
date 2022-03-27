@@ -1,0 +1,59 @@
+<div class="me-profile-layout">
+    <div class="row mt-2">
+        <div class="col-md-3" >
+            <ul class="profile-links">
+                <li>
+                    <a routerLink="/store/store-profile" [routerLinkActive]="'active'" [routerLinkActiveOptions]="{exact: true}">
+                        <i class="fa fa-store"></i>
+                        <span>store profile</span>
+                    </a>
+                </li>
+                <li>
+                    <a routerLink="paid-sales" [routerLinkActive]="'active'" [routerLinkActiveOptions]="{exact: false}">
+                        <i class="fas fa-credit-card"></i>
+                        <span>paid sales</span>
+                    </a>
+                </li>
+                <li>
+                    <a routerLink="rejected-sales" [routerLinkActive]="'active'" [routerLinkActiveOptions]="{exact: false}">
+                        <i class="fas fa-money-check"></i>
+                        <span>rejected sales</span>
+                    </a>
+                </li>
+                <li>
+                    <a routerLink="total-sales" [routerLinkActive]="'active'" [routerLinkActiveOptions]="{exact: false}">
+                        <i class="fas fa-coins"></i>
+                        <span>total sales</span>
+                    </a>
+                </li>
+                <li>
+                    <a routerLink="best-seller" [routerLinkActive]="'active'" [routerLinkActiveOptions]="{exact: false}">
+                        <i class="fa fa-star"></i>
+                        <span>best saller</span>
+                    </a>
+                </li>
+                <li>
+                    <a routerLink="my-sales" [routerLinkActive]="'active'" [routerLinkActiveOptions]="{exact: false}">
+                        <i class="fas fa-shopping-basket"></i>
+                        <span>my sales</span>
+                    </a>
+                </li>
+                <li>
+                    <a routerLink="followers" [routerLinkActive]="'active'" [routerLinkActiveOptions]="{exact: false}">
+                        <i class="fa fa-users"></i>
+                        <span>followers</span>
+                    </a>
+                </li>
+                <!-- <li>
+                    <a routerLink="total-views" [routerLinkActive]="'active'" [routerLinkActiveOptions]="{exact: false}">
+                        <i class="fa fa-eye"></i>
+                        <span>total views</span>
+                    </a>
+                </li> -->
+            </ul>
+        </div>
+        <div class="col-md-9">
+            <router-outlet></router-outlet>
+        </div>
+    </div>
+</div>

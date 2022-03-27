@@ -1,0 +1,27 @@
+<h3>total sales</h3>
+<div class="filter-view-way">
+    <div class='input'>
+        <input type="text" class="form-control" placeholder="search" aria-label="Username"
+            aria-describedby="basic-addon1">
+    </div>
+    <div class='view-way'>
+        <i class="fas fa-th"></i>
+        <i class="fas fa-list"></i>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-4" *ngFor="let p of [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18]">
+        <div class="card">
+            <img src="../../../../../../assets/images/products/grey/product-{{p}}.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h4 class="card-title">iphone X S max</h4>
+                <h3 class="card-title text-primary">500 EGP</h3>
+                <p class="card-text d-flex flex-column">
+                    <span>07-14-20</span>
+                    <span>01:03 AM</span>
+                </p>
+                <span class="badge badge-info">apple</span>
+            </div>
+        </div>
+    </div>
+</div>
