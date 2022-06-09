@@ -20,6 +20,8 @@ import { SharedModule } from '../../shared/shared.module';
 import { MeLayoutComponent } from './me-layout.component';
 import { ProfileModule } from './profile/profile.module';
 
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
+
 
 @NgModule({
   declarations: [
@@ -29,7 +31,9 @@ import { ProfileModule } from './profile/profile.module';
     CommonModule,
     MeRoutingModule,
     SharedModule,
-    ProfileModule
+    ProfileModule,
+    Ng2SearchPipeModule,
+ 
   ]
 })
 export class MeModule { }

@@ -1,9 +1,14 @@
 export interface User {
     id: number;
     name: string;
+    s_name:string;
     image: string;
     email: string;
     mobile: any;
-    is_public: number;
-    password:string
+   
+    password:string;
+    birth_date:string;
+    country_code:number;
+    gender:number;
+    country_id:number
 }

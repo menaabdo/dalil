@@ -6,11 +6,11 @@
     </div>
 </div>
 <div class="row">
-    <div class="col-md-4" *ngFor="let s of [1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,11,1,1,1,1,1,]">
+    <div class="col-md-4" *ngFor="let view of views">
         <div class="card shadow border-0">
             <div class="card-header bg-white d-flex justify-content-between align-items-center remove-after">
-                <h4 class='m-0'>advertising title</h4>
-                <img src="../../../../assets/images/profile/person.png" class='rounded-circle cursor-pointer' width="40px" height="40px">
+                <h4 class='m-0'>{{view.name}}</h4>
+                <img src="https://dalilisouq.com/{{view.image}}" class='rounded-circle cursor-pointer' width="40px" height="40px">
             </div>
             <img src="../../../../assets/images/ads/ads.jpg" class="card-img-top" alt="...">
             <div class="card-body border-0">

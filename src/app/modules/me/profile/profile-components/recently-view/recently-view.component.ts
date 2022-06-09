@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { UserService } from 'src/app/service/user.service';
 
 @Component({
   selector: 'app-recently-view',
@@ -6,10 +7,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./recently-view.component.scss']
 })
 export class RecentlyViewComponent implements OnInit {
-
-  constructor() { }
+response!:any
+views:any
+  constructor(private recentview:UserService) { }
 
   ngOnInit(): void {
+   this.recentview.recently_view().subscribe((res)=>{this.response=res;this.views=this.response.products.data;console.log(this.views)})
   }
 
 }

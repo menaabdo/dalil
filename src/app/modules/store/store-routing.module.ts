@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { StoreLayoutComponent } from './store-layout.component';
+import { HeaderComponent } from 'src/app/layout/header/header.component';
 
 const routes: Routes = [
   {

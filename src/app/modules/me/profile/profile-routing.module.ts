@@ -1,6 +1,9 @@
-import { NgModule } from '@angular/core';
+import { Component, NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { StoreLayoutComponent } from '../../store/store-layout.component';
+import { MeLayoutComponent } from '../me-layout.component';
 import { AccountComponent } from './profile-components/account/account.component';
+import { CategoriesComponent } from './profile-components/account/categories/categories.component';
 import { AddressesComponent } from './profile-components/addresses/addresses.component';
 import { EditOfferComponent } from './profile-components/edit-offer/edit-offer.component';
 import { EditProductsComponent } from './profile-components/edit-products/edit-products.component';
@@ -17,7 +20,6 @@ import { RejectedSalesComponent } from './profile-components/rejected-sales/reje
 import { SalesComponent } from './profile-components/sales/sales.component';
 import { StoresComponent } from './profile-components/stores/stores.component';
 import { ProfileLayoutComponent } from './profile-layout.component';
-
 const routes: Routes = [
   {
     path: "",
@@ -54,7 +56,16 @@ const routes: Routes = [
       },
       {
         path: "account",
-        component: AccountComponent
+        children: [
+          {
+            path: "",
+            component: AccountComponent
+          },
+          {
+            path: "categories",
+            component: CategoriesComponent
+          }
+        ]
       },
       {
         path: "stores",
@@ -67,7 +78,8 @@ const routes: Routes = [
           {
             path: "edit-store",
             component: EditStoreComponent
-          }
+          },
+         
         ]
 
       },
@@ -105,8 +117,13 @@ const routes: Routes = [
         component: RecentlyViewComponent
       }
     ]
-  }
-];
+  },
+  // {
+  //   path:'store-profile/:id',component:StoreProfileComponent
+  //   },
+    {path:'store-layout/:id',component:StoreLayoutComponent}
+
+ ];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],

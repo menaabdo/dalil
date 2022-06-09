@@ -10,14 +10,31 @@ import { NgbModule, NgbTooltipModule } from '@ng-bootstrap/ng-bootstrap';
 import { AllAdsComponent } from './modules/pages/all-ads/all-ads.component';
 import { MeModule } from './modules/me/me.module';
 import { ProfileModule } from './modules/me/profile/profile.module';
+import { HomeComponent } from './modules/pages/home/home.component';
+import { CategoriesComponent } from './modules/pages/categories/categories.component';
+import { BuyOnlineComponent } from './modules/pages/buy-online/buy-online.component';
+import { StoresComponent } from './modules/pages/stores/stores.component';
+import { OffersComponent } from './modules/pages/offers/offers.component';
 import { LoginFormComponent } from './login-form/login-form.component';
 import { HttpClientModule } from '@angular/common/http';
+import { RegisterFormComponent } from './register-form/register-form.component';
+import { FormsModule } from '@angular/forms';
+import { RouterModule } from '@angular/router';
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
 
 @NgModule({
   declarations: [
     AppComponent,
     AllAdsComponent,
+    HomeComponent,
+    CategoriesComponent,
+    BuyOnlineComponent,
+    StoresComponent,
+    OffersComponent,
     LoginFormComponent,
+    RegisterFormComponent,
+   
+    
   ],
   imports: [
     BrowserModule,
@@ -28,6 +45,9 @@ import { HttpClientModule } from '@angular/common/http';
     NgbTooltipModule,
     MeModule,
     HttpClientModule,
+    FormsModule,
+    RouterModule,
+    Ng2SearchPipeModule
   ],
   providers: [],
   bootstrap: [AppComponent]

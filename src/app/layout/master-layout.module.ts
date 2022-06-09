@@ -7,13 +7,13 @@ import { MasterLayoutComponent } from './master-layout/master-layout.component';
 import { SharedModule } from '../shared/shared.module';
 
 
-
 @NgModule({
   declarations: [
     MasterLayoutComponent,
     SearchBarComponent,
     HeaderComponent,
     FooterComponent,
+    
   ],
   imports: [
     CommonModule,

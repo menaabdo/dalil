@@ -1,93 +1,34 @@
 <h3>my stores</h3>
-<div class="filter-view-way">
-    <div class='input'>
-        <input type="text" class="form-control" placeholder="search" aria-label="Username"
-            aria-describedby="basic-addon1">
-    </div>
+<div class="header-search m-3">
+    <a href="#" class="search-toggle" role="button"><i class="porto-icon-search-3"></i></a>
+    <form action="#" method="get">
+        <div class="header-search-wrapper" style="width: 20%;">
+            <input type="search" class="form-control" name="q" id="q" placeholder=" Search in your stores..." required style='background-color:#990033 ;color:white;font-size:14px' [(ngModel)]="term">
+            <button class="btn" type="submit" style='background-color:#990033; color:white'><i class="porto-icon-search-3"></i></button>
+        </div>
+        <!-- End .header-search-wrapper -->
+    </form>
 </div>
-<div class="row">
-    <div class="col-md-4">
+<div class="row" >
+    <div class="col-md-4" *ngFor='let store of stores|filter:term'>
         <div class="card">
             <div class="card-header d-flex justify-content-between align-items-center ">
-                <span class="rate"><i class="fa fa-star"></i> 4.5</span>
+                <span class="rate"><i class="fa fa-star"></i> {{store.rate}}</span>
                 <div class="dropdown">
                     <i class="fas fa-ellipsis-v" id="dropdownMenuButton" data-toggle="dropdown" aria-expanded="false">
                     </i>
                     <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                        <a class="dropdown-item" routerLink="/store/store-profile"><i class="fas fa-eye"></i> view store</a>
+                        <a class="dropdown-item" routerLink="/store-layout/{{store.id}}"><i class="fas fa-eye"></i> view store</a>
                         <a class="dropdown-item" routerLink="edit-store"><i class="fas fa-pen-square"></i> edit store</a>
                         <a class="dropdown-item"><i class="fas fa-trash-alt"></i> delete store</a>
                     </div>
                 </div>
             </div>
-            <img src="../../../../assets/images/stores/pexels-artem-beliaikin-929245.jpg" class="card-img-top"
+            <img src="https://dalilisouq.com/{{store.image}}" class="card-img-top"
                 alt="...">
             <div class="card-body" style="min-height: auto;">
-                <h4 class='m-0 cart-title text-center'>Card title</h4>
+                <h4 class='m-0 cart-title text-center'>{{store.name}}</h4>
             </div>
         </div>
     </div>
-    <div class="col-md-4">
-        <div class="card">
-            <div class="card-header d-flex justify-content-between align-items-center ">
-                <span class="rate"><i class="fa fa-star"></i> 4.5</span>
-                <div class="dropdown">
-                    <i class="fas fa-ellipsis-v" id="dropdownMenuButton" data-toggle="dropdown" aria-expanded="false">
-                    </i>
-                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                        <a class="dropdown-item" routerLink="/store/store-profile"><i class="fas fa-eye"></i> view store</a>
-                        <a class="dropdown-item" routerLink="edit-store"><i class="fas fa-pen-square"></i> edit store</a>
-                        <a class="dropdown-item"><i class="fas fa-trash-alt"></i> delete store</a>
-                    </div>
-                </div>
-            </div>
-            <img src="../../../../assets/images/stores/pexels-caio-64613.jpg" class="card-img-top"
-                alt="...">
-            <div class="card-body" style="min-height: auto;">
-                <h4 class='m-0 cart-title text-center'>Card title</h4>
-            </div>
-        </div>
-    </div>
-    <div class="col-md-4">
-        <div class="card">
-            <div class="card-header d-flex justify-content-between align-items-center ">
-                <span class="rate"><i class="fa fa-star"></i> 4.5</span>
-                <div class="dropdown">
-                    <i class="fas fa-ellipsis-v" id="dropdownMenuButton" data-toggle="dropdown" aria-expanded="false">
-                    </i>
-                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                        <a class="dropdown-item" routerLink="/store/store-profile"><i class="fas fa-eye"></i> view store</a>
-                        <a class="dropdown-item" routerLink="edit-store"><i class="fas fa-pen-square"></i> edit store</a>
-                        <a class="dropdown-item"><i class="fas fa-trash-alt"></i> delete store</a>
-                    </div>
-                </div>
-            </div>
-            <img src="../../../../assets/images/stores/pexels-pixabay-164763.jpg" class="card-img-top"
-                alt="...">
-            <div class="card-body" style="min-height: auto;">
-                <h4 class='m-0 cart-title text-center'>Card title</h4>
-            </div>
-        </div>
-    </div>
-    <div class="col-md-4">
-        <div class="card">
-            <div class="card-header d-flex justify-content-between align-items-center ">
-                <span class="rate"><i class="fa fa-star"></i> 4.5</span>
-                <div class="dropdown">
-                    <i class="fas fa-ellipsis-v" id="dropdownMenuButton" data-toggle="dropdown" aria-expanded="false">
-                    </i>
-                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                        <a class="dropdown-item" routerLink="/store/store-profile"><i class="fas fa-eye"></i> view store</a>
-                        <a class="dropdown-item" routerLink="edit-store"><i class="fas fa-pen-square"></i> edit store</a>
-                        <a class="dropdown-item"><i class="fas fa-trash-alt"></i> delete store</a>
-                    </div>
-                </div>
-            </div>
-            <img src="../../../../assets/images/stores/pexels-pixabay-264636.jpg" class="card-img-top"
-                alt="...">
-            <div class="card-body" style="min-height: auto;">
-                <h4 class='m-0 cart-title text-center'>Card title</h4>
-            </div>
-        </div>
-    </div>
-</div>
+   

@@ -1,14 +1,22 @@
 // @import '~bootstrap/scss/bootstrap';
+
 /* You can add global styles to this file, and also import other style files */
+
+
 /* Importing Bootstrap SCSS file. */
 
+@import 'swiper/scss';
+@import 'swiper/scss/navigation';
+@import 'swiper/scss/pagination';
 body {
     background-color: #f1f1f1;
     position: relative;
 }
+
 * {
     text-transform: capitalize !important;
 }
+
 .remove-after {
     &::after {
         display: none;
@@ -19,6 +27,7 @@ body {
         overflow: hidden;
     }
 }
+
 .card {
     .card-header,
     .card-body {
@@ -71,7 +80,8 @@ button {
         }
     }
 }
-.dropdown > i {
+
+.dropdown>i {
     width: 35px;
     height: 35px;
     background: #ccc;
@@ -88,7 +98,6 @@ button {
 // .fa.fa-heart{
 // color: #8c1434;
 // }
-
 .badge {
     font-size: 80%;
 }
@@ -101,6 +110,7 @@ a {
     text-decoration: none !important;
     color: #000;
 }
+
 .following-card {
     img {
         width: 40px;
@@ -112,12 +122,11 @@ a {
 .text-primary {
     color: #8c1434 !important;
 }
+
 .filter-view-way {
     display: flex;
-    width: 100%;
     align-items: center;
     justify-content: space-between;
-    margin-bottom: 2rem;
     .input {
         width: 50%;
         input {

@@ -16,14 +16,15 @@ export class MeLayoutComponent implements OnInit {
   get UserTabs(): typeof UserTabs {
     return UserTabs;
   }
-
+profile_data:any
   changeUserTab = (tab: UserTabs) => this.userTab = tab;
 
   constructor(private loginservice:UserService) { }
- userData?:any
-  ngOnInit(): void {
-  this.userData= this.loginservice.getuser();
-  }
-  
 
-}
+  ngOnInit(): void {
+    this.loginservice.profile({country_id:1    
+    }).subscribe((res)=>{
+  this.profile_data=res
+  })
+
+}}
