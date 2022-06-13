@@ -7,24 +7,24 @@
             </a>
         </div>
         <ul class='m-0'>
-            <li><a><i class='fab fa-facebook-f'></i></a></li>
-            <li><a><i class='fab fa-instagram'></i></a></li>
-            <li><a><i class='fab fa-twitter'></i></a></li>
-            <li><a><i class='fab fa-youtube'></i></a></li>
+            <li><a [href]=profile_data?.Response.facebook *ngIf='profile_data?.Response.facebook'><i class='fab fa-facebook-f'></i></a></li>
+            <li><a href='{{profile_data?.Response.instagram}}'><i class='fab fa-instagram'></i></a></li>
+            <li><a [href]=profile_data?.Response.twitter *ngIf='profile_data?.Response.twitter'><i class='fab fa-twitter'></i></a></li>
+            <li><a  [href]=profile_data?.Response.youtube *ngIf='profile_data?.Response.youtube'><i class='fab fa-youtube'></i></a></li>
         </ul>
     </div>
     <div class="card-body">
         <div class="row">
             <div class="col-md-4">
-                <img src="../../../../../../assets/images/profile/person.png" alt="">
+                <img src="https://dalilisouq.com/{{profile_data?.Response.image}}" alt="">
             </div>
             <div class="col-md-8">
                 <ul class="list-group">
-                    <li class="list-group-item"><i class="fa fa-user"></i> <span class="ml-2">https://dalilisouq.com/en/profile/1/mazen</span> </li>
-                    <li class="list-group-item"><i class="fa fa-envelope"></i> <span class="ml-2">engmazen.it@gmail.com</span> </li>
-                    <li class="list-group-item"><i class="fa fa-phone"></i> <span class="ml-2">962799222819</span> </li>
-                    <li class="list-group-item"><i class="fas fa-venus-mars"></i> <span class="ml-2">male</span> </li>
-                    <li class="list-group-item"><i class="fa fa-calendar"></i> <span class="ml-2">1957-03-22</span> </li>
+                    <li class="list-group-item"><i class="fa fa-user"></i> <span class="ml-2">{{profile_data?.Response.url}}</span> </li>
+                    <li class="list-group-item"><i class="fa fa-envelope"></i> <span class="ml-2">{{profile_data?.Response.email}}</span> </li>
+                    <li class="list-group-item"><i class="fa fa-phone"></i> <span class="ml-2">{{profile_data?.Response.mobile}}</span> </li>
+                    <li class="list-group-item"><i class="fas fa-venus-mars"></i> <span class="ml-2">{{profile_data?.Response.gender}}</span> </li>
+                    <li class="list-group-item"><i class="fa fa-calendar"></i> <span class="ml-2">{{profile_data?.Response.birth_date}}</span> </li>
                     <li class="list-group-item">
                         <div class="form-group form-check m-0">
                             <input type="checkbox" class="form-check-input" id="exampleCheck1"> 

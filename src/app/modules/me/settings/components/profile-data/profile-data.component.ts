@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { UserService } from 'src/app/service/user.service';
+import { CookieService } from 'ngx-cookie-service';
 
 @Component({
   selector: 'app-profile-data',
@@ -6,10 +8,20 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./profile-data.component.scss']
 })
 export class ProfileDataComponent implements OnInit {
-
-  constructor() { }
+  user_data!:any
+  profile_data!:any
+  constructor(private profile:UserService,private cookieService: CookieService ) { }
 
   ngOnInit(): void {
-  }
+    
+    
+    this.user_data= this.profile.getuser()
+    
+    this.profile.profile({country_id:1    
+        }).subscribe((res)=>{
+      this.profile_data=res
+      console.log(this.cookieService.get('token'))
+    })
+   }
 
 }

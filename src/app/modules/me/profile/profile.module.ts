@@ -21,7 +21,9 @@ import { ProfileLayoutComponent } from './profile-layout.component';
 import { EditProductsComponent } from './profile-components/edit-products/edit-products.component';
 import { EditStoreComponent } from './profile-components/edit-store/edit-store.component';
 import { EditOfferComponent } from './profile-components/edit-offer/edit-offer.component';
-
+import { CategoriesComponent } from './profile-components/account/categories/categories.component';
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
+import { OrderComponent } from '../../../order/order.component';
 @NgModule({
   declarations: [
     ProfileLayoutComponent,
@@ -42,11 +44,20 @@ import { EditOfferComponent } from './profile-components/edit-offer/edit-offer.c
     EditProductsComponent,
     EditStoreComponent,
     EditOfferComponent,
+    CategoriesComponent,
+    OrderComponent
+    
+  
+    // StoreProfileComponent,
+    // StoreLayoutComponent,
+   
   ],
   imports: [
     CommonModule,
     ProfileRoutingModule,
     SharedModule,
+    Ng2SearchPipeModule,
+    
   ]
 })
 export class ProfileModule { }
