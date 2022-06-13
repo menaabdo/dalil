@@ -9,12 +9,12 @@ import { ActivatedRoute, Router } from '@angular/router';
   styleUrls: ['./profile-layout.component.scss']
 })
 export class ProfileLayoutComponent implements OnInit {
-router!:any
-  constructor(  private activeroute: ActivatedRoute,) { }
+route!:any
+  constructor(  private activeroute: ActivatedRoute,private router:Router) { }
 
   ngOnInit(): void {
-   this.router= this.activeroute.snapshot.routeConfig?.children
-   console.log(this.router[0].path)
+   this.route= this.router.url
+   console.log(this.route)
   }
 
 }

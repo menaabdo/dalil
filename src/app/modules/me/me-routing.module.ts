@@ -25,6 +25,7 @@ const routes: Routes = [
         path: "my-wallet",
         loadChildren: () => import("./my-wallet/my-wallet.module").then(m => m.MyWalletModule)
       },
+     
       
     ]
   }

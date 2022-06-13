@@ -2,10 +2,11 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { StoreLayoutComponent } from './store-layout.component';
 import { HeaderComponent } from 'src/app/layout/header/header.component';
+import { StoreProfileComponent } from './sotre-details/components/store-profile/store-profile.component';
 
 const routes: Routes = [
   {
-    path: "",
+    path: "store:/id",
     component: StoreLayoutComponent,
     children: [
       {

@@ -3,6 +3,7 @@
  import{City} from './city.model'
  import{User} from './user.model'
  import{Category} from './category.model'
+import { Store } from './store.model'
  export interface  Product  {
      id:number
      name:string
@@ -21,5 +22,9 @@
      favourite:boolean
      category:Category
      comments:number
+     is_complete:boolean
+     rate:number
+     store:Store
+
  }
  

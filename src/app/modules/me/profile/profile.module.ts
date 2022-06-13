@@ -23,6 +23,7 @@ import { EditStoreComponent } from './profile-components/edit-store/edit-store.c
 import { EditOfferComponent } from './profile-components/edit-offer/edit-offer.component';
 import { CategoriesComponent } from './profile-components/account/categories/categories.component';
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
+import { OrderComponent } from '../../../order/order.component';
 @NgModule({
   declarations: [
     ProfileLayoutComponent,
@@ -44,6 +45,9 @@ import { Ng2SearchPipeModule } from 'ng2-search-filter';
     EditStoreComponent,
     EditOfferComponent,
     CategoriesComponent,
+    OrderComponent
+    
+  
     // StoreProfileComponent,
     // StoreLayoutComponent,
    
@@ -52,7 +56,8 @@ import { Ng2SearchPipeModule } from 'ng2-search-filter';
     CommonModule,
     ProfileRoutingModule,
     SharedModule,
-    Ng2SearchPipeModule
+    Ng2SearchPipeModule,
+    
   ]
 })
 export class ProfileModule { }

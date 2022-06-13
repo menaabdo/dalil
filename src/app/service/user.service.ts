@@ -93,11 +93,17 @@ token= this.cookieService.get('token')
 
   }
   /////////////////////////////////////////////
-  myorders(){
+  myorders(is_complete:number){
+    console.log(is_complete)
     const headers =this.headers
-    return this.httpclient.post(`${environment.apiURL}user/orders?os=android`,{'is_complete':0},{headers})
+    return this.httpclient.post(`${environment.apiURL}user/orders?os=android`,{'is_complete':is_complete},{headers})
  
 
+  }
+  orderdetailes(id:number){
+    const headers =this.headers
+    return this.httpclient.post(`${environment.apiURL}user/order?os=android`,{'order_id':id},{headers})
+ 
   }
   myaccount(){
     const headers =this.headers

@@ -17,7 +17,7 @@ const routes: Routes = [
     component: StoreDetailsLayoutComponent,
     children: [
       {
-        path: "",
+        path: "store-profile/:id",
         component: StoreProfileComponent
       },
       {

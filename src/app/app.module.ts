@@ -21,7 +21,6 @@ import { RegisterFormComponent } from './register-form/register-form.component';
 import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -33,6 +32,8 @@ import { Ng2SearchPipeModule } from 'ng2-search-filter';
     OffersComponent,
     LoginFormComponent,
     RegisterFormComponent,
+    
+    // OrderComponent,
    
     
   ],

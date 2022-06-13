@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 import { UserService } from 'src/app/service/user.service';
 enum UserTabs {
   Profile = "Profile",
@@ -19,12 +20,15 @@ export class MeLayoutComponent implements OnInit {
 profile_data:any
   changeUserTab = (tab: UserTabs) => this.userTab = tab;
 
-  constructor(private loginservice:UserService) { }
+  constructor(private loginservice:UserService,private route:Router,private activeroute:ActivatedRoute) { }
 
   ngOnInit(): void {
+    console.log(this.route.url)
     this.loginservice.profile({country_id:1    
     }).subscribe((res)=>{
   this.profile_data=res
+  this.route.navigateByUrl('/home/me/profile/my-profile')
   })
+
 
 }}

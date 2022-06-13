@@ -20,6 +20,8 @@ import { RejectedSalesComponent } from './profile-components/rejected-sales/reje
 import { SalesComponent } from './profile-components/sales/sales.component';
 import { StoresComponent } from './profile-components/stores/stores.component';
 import { ProfileLayoutComponent } from './profile-layout.component';
+import { StoreModule } from '../../store/store.module';
+import { OrderComponent } from '../../../order/order.component';
 const routes: Routes = [
   {
     path: "",
@@ -38,6 +40,7 @@ const routes: Routes = [
           }
         ]
       },
+      
       {
         path: "followers",
         component: FollowersComponent
@@ -115,13 +118,22 @@ const routes: Routes = [
       {
         path: "recently-view",
         component: RecentlyViewComponent
-      }
-    ]
+      }, {path:'order/:id',component:OrderComponent},
+   
+     
+        ],
+        
+        
   },
   // {
   //   path:'store-profile/:id',component:StoreProfileComponent
   //   },
-    {path:'store-layout/:id',component:StoreLayoutComponent}
+    // {path:'store-layout/:id',component:StoreLayoutComponent}
+    {
+      path: "store/:id",
+      loadChildren: () => import("../../store/store.module").then(m => m.StoreModule)
+    },
+   
 
  ];
 

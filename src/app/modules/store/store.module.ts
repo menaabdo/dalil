@@ -4,7 +4,8 @@ import { CommonModule } from '@angular/common';
 import { StoreRoutingModule } from './store-routing.module';
 import { StoreLayoutComponent } from './store-layout.component';
 import { SharedModule } from 'src/app/shared/shared.module';
-
+import { SotreDetailsModule } from './sotre-details/sotre-details.module';
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
 
 @NgModule({
   declarations: [
@@ -13,7 +14,9 @@ import { SharedModule } from 'src/app/shared/shared.module';
   imports: [
     CommonModule,
     StoreRoutingModule,
-    SharedModule
+    SharedModule,
+  SotreDetailsModule,
+  Ng2SearchPipeModule
   ]
 })
 export class StoreModule { }

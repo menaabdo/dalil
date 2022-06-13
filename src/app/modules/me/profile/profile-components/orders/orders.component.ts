@@ -12,8 +12,19 @@ export class OrdersComponent implements OnInit {
   constructor(private ordersserve:UserService ) { }
 response!:any
 orders!:Order[]
+is_complete=0
   ngOnInit(): void {
-    this.ordersserve.myorders().subscribe((res)=>{console.log(res);this.response=res;this.orders=this.response.Response.data})
+    this.ordersserve.myorders(this.is_complete).subscribe((res)=>{console.log(res);this.response=res;this.orders=this.response.Response.data;console.log(this.orders[0].id)})
+  }
+  waitingorders(){
+    this.is_complete=0
+    this.ordersserve.myorders(this.is_complete).subscribe((res)=>{console.log(res);this.response=res;this.orders=this.response.Response.data;console.log(this.orders[0].id)})
+  
+  }
+  deliveredorders(){
+    this.is_complete=1
+    this.ordersserve.myorders(this.is_complete).subscribe((res)=>{console.log(res);this.response=res;this.orders=this.response.Response.data;console.log(this.orders[0].id)})
+  
   }
 
 }

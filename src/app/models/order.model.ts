@@ -2,6 +2,7 @@ import { Address } from "../models/addresss.model";
 import { Category } from "./category.model";
 import { City } from "./city.model";
 import { Product } from "./product.model";
+import { Store } from "./store.model";
 import { User } from "./user.model";
 
 export interface Order {
@@ -13,6 +14,7 @@ export interface Order {
     time:string
     mobile:string,
     total:number,
+    created_at:string
     delivery_price:number,
     commission:number
     product:Product
@@ -24,10 +26,16 @@ export interface Order {
     offers:number
     city:City
     seller:User
+    details:any
+    service_percent:number
+    is_fast:number
+    coupon_value:number
     comments:number
     category:Category
     status:number
     reward_points:number
     vat_amount:number
     service_amount:number
+    is_complete:boolean
+    store:Store
 }
