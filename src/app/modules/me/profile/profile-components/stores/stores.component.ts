@@ -14,10 +14,15 @@ response!:any
 stores!:Store[]
 term=''
 
-  constructor(private storessserve:UserService, ) { }
+  constructor(private storessserve:UserService,private route:Router) { }
 
   ngOnInit(): void {
+    console.log(this.term)
     this.storessserve.mystores('en').subscribe((res)=>{this.response=res;this.stores=this.response.Response})
+  }
+  showme(id:number){
+    this.route.navigateByUrl('/home/me/store/'+id)
+
   }
 
 }
