@@ -12,15 +12,15 @@ const routes: Routes = [
     component: StoreProductLayoutComponent,
     children:[
       {
-        path: "active-ads",
+        path: "active-ads/:id",
         component: StoreProductActiveAdsComponent
       },
       {
-        path: "passive-ads",
+        path: "passive-ads/:id",
         component: StoreProductPassiveAdsComponent
       },
       {
-        path: "expired-ads",
+        path: "expired-ads/:id",
         component: StoreProductExpiredAdsComponent
       },
     ]

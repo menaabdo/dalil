@@ -22,6 +22,17 @@ import { StoresComponent } from './profile-components/stores/stores.component';
 import { ProfileLayoutComponent } from './profile-layout.component';
 import { StoreModule } from '../../store/store.module';
 import { OrderComponent } from '../../../order/order.component';
+import { AllcatComponent } from './profile-components/account/allcat/allcat.component';
+import { PackagesOfCatComponent } from './profile-components/account/packages-of-cat/packages-of-cat.component';
+import { ViewprofileComponent } from './profile-components/my-profile/viewprofile/viewprofile.component';
+import { AddproductComponent } from '../../../addproduct/addproduct.component';
+import { SelectparentcategoryComponent } from '../../../addproduct/selectparentcategory/selectparentcategory.component';
+import { ColorsSizesComponent } from 'src/app/addproduct/colors-sizes/colors-sizes.component';
+import { AddstoreComponent } from './profile-components/stores/addstore/addstore.component';
+import { CitiesComponent } from 'src/app/cities/cities.component';
+import { RegionsComponent } from 'src/app/cities/regions/regions.component';
+import { AddofferComponent } from './profile-components/offers/addoffer/addoffer.component';
+import { AddpackagesComponent } from './profile-components/offers/addpackages/addpackages.component';
 const routes: Routes = [
   {
     path: "",
@@ -33,6 +44,19 @@ const routes: Routes = [
           {
             path: "",
             component: MyProfileComponent
+          },
+          {
+                path:'view',
+                component:ViewprofileComponent
+          },
+          {
+            path:'select-category/:data',
+            component:SelectparentcategoryComponent
+          },
+          {path:'properity-color/:data',component:ColorsSizesComponent},
+          {
+            path:'add_product/:data',
+            component:AddproductComponent
           },
           {
             path: "edit-product",
@@ -68,6 +92,12 @@ const routes: Routes = [
             path: "categories",
             component: CategoriesComponent
           }
+          ,{path:'allcat',
+          component:AllcatComponent,
+         
+          
+        },
+        {path:'packages/:id',component:PackagesOfCatComponent}
         ]
       },
       {
@@ -82,6 +112,8 @@ const routes: Routes = [
             path: "edit-store",
             component: EditStoreComponent
           },
+          {path:'add-store/:data', component:AddstoreComponent}
+         
          
         ]
 
@@ -96,7 +128,14 @@ const routes: Routes = [
           {
             path:"edit-offer",
             component: EditOfferComponent
-          }
+          },
+          {
+            path:'offer-add/:data',
+            component:AddofferComponent
+          },
+          {path:'add-package',
+          component:AddpackagesComponent
+        }
         ]
       },
       {
@@ -120,6 +159,16 @@ const routes: Routes = [
         component: RecentlyViewComponent
       }, {path:'order/:id',component:OrderComponent},
    
+      {
+        path:'cities/:data',
+        component:CitiesComponent,
+        
+          
+       
+      },
+      {path:'regions/:data',
+          component:RegionsComponent
+        }
      
         ],
         

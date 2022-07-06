@@ -23,10 +23,14 @@ profile_data:any
   constructor(private loginservice:UserService,private route:Router,private activeroute:ActivatedRoute) { }
 
   ngOnInit(): void {
-    console.log(this.route.url)
+    
     this.loginservice.profile({country_id:1    
     }).subscribe((res)=>{
   this.profile_data=res
+  this.loginservice.id=this.profile_data.Response.id
+  localStorage.setItem('lat',this.profile_data.Response.address.lat)
+  localStorage.setItem('long',this.profile_data.Response.address.long)
+
   this.route.navigateByUrl('/home/me/profile/my-profile')
   })
 

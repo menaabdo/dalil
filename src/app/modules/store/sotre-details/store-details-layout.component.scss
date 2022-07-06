@@ -1,6 +1,9 @@
 .me-profile-layout {
     position: relative;
-    margin-top: 80px;
+  //  margin-top: 80px;
+}
+.total{  background-color:  #8c1434 !important;
+        color:white;
 }
 .profile-links {
     display: flex;
@@ -29,7 +32,7 @@
                 }
             }
         }
-        i {
+        i { font-size: 10px !important;
             margin-right: 0.5rem;
             transition: 0.4s ease-in-out;
         }
@@ -38,7 +41,9 @@
         }
         
     }
+    
 }
+
 .me {
     margin-top: 1rem;
     width: 100%;
@@ -59,7 +64,8 @@
     // }
     &-header {
       display: flex;
-      margin-top: 300px;
+      text-align: center;
+     // margin-top: 300px;
       &-img {
         width: 120px;
         height: 120px;

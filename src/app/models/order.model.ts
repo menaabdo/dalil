@@ -38,4 +38,6 @@ export interface Order {
     service_amount:number
     is_complete:boolean
     store:Store
+    driver:User[]
+    name:string
 }

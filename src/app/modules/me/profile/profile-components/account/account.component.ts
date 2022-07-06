@@ -23,7 +23,7 @@ export class AccountComponent implements OnInit {
   ngOnInit(): void {
     this.activePlan=0
     this.activePackage=0
-    this.accountserve.myaccount().subscribe((res)=>{this.response=res;this.accounts=this.response.Response.accounts;this.cats=this.response.Response.categories_packages;console.log(this.cats)})
+    this.accountserve.myaccount().subscribe((res)=>{this.response=res;this.accounts=this.response.Response.accounts;this.cats=this.response.Response.categories_packages;console.log(this.accounts)})
   }
 
   onSwiper([swiper] : any) {

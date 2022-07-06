@@ -21,6 +21,20 @@ import { RegisterFormComponent } from './register-form/register-form.component';
 import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
+import { AllcatComponent } from './modules/me/profile/profile-components/account/allcat/allcat.component';
+import { PackagesOfCatComponent } from './modules/me/profile/profile-components/account/packages-of-cat/packages-of-cat.component';
+import { ViewprofileComponent } from './modules/me/profile/profile-components/my-profile/viewprofile/viewprofile.component';
+import { AddproductComponent } from './addproduct/addproduct.component';
+import { SelectparentcategoryComponent } from './addproduct/selectparentcategory/selectparentcategory.component';
+import { ColorsSizesComponent } from './addproduct/colors-sizes/colors-sizes.component';
+// import { ShareButtonsModule } from 'ngx-sharebuttons/buttons';
+// import { ShareIconsModule } from 'ngx-sharebuttons/icons';
+import { Loader } from "@googlemaps/js-api-loader";
+import { AddstoreComponent } from './modules/me/profile/profile-components/stores/addstore/addstore.component';
+import { CitiesComponent } from './cities/cities.component';
+import { RegionsComponent } from './cities/regions/regions.component';
+import { AddofferComponent } from './modules/me/profile/profile-components/offers/addoffer/addoffer.component';
+import { AddpackagesComponent } from './modules/me/profile/profile-components/offers/addpackages/addpackages.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -32,7 +46,19 @@ import { Ng2SearchPipeModule } from 'ng2-search-filter';
     OffersComponent,
     LoginFormComponent,
     RegisterFormComponent,
+    AllcatComponent,
+    PackagesOfCatComponent,
+    ViewprofileComponent,
+    AddproductComponent,
+    SelectparentcategoryComponent,
+    ColorsSizesComponent,
+    AddstoreComponent,
+    CitiesComponent,
+    RegionsComponent,
+    AddofferComponent,
+    AddpackagesComponent
     
+   
     // OrderComponent,
    
     
@@ -48,7 +74,11 @@ import { Ng2SearchPipeModule } from 'ng2-search-filter';
     HttpClientModule,
     FormsModule,
     RouterModule,
-    Ng2SearchPipeModule
+    Ng2SearchPipeModule,
+    // ShareButtonsModule.withConfig({debug:true}
+    //   ),
+    //  ShareIconsModule,
+    
   ],
   providers: [],
   bootstrap: [AppComponent]
