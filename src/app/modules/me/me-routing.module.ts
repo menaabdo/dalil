@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { MeLayoutComponent } from './me-layout.component';
 //import { StoreLayoutComponent } from './store/store-layout.component';
-
+import { AuthGuard } from 'src/app/core/guards/auth.guard';
 
 const routes: Routes = [
   {
@@ -11,7 +11,8 @@ const routes: Routes = [
     children: [
       {
         path: "profile",
-        loadChildren: () => import("./profile/profile.module").then(m => m.ProfileModule)
+        loadChildren: () => import("./profile/profile.module").then(m => m.ProfileModule),
+        //canActivate: [AuthGuard,]
       },
       {
         path: "my-advertising",

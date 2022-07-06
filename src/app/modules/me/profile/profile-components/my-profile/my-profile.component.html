@@ -19,6 +19,13 @@
                 <i class="fas fa-list" (click)='spread()'></i>
             </div>
         </div>
+        <div class="leftFixedBtn" >
+            <a routerLink="add_product/data" >
+              <i class="fa fa-plus fa-2x"></i>
+            </a>
+            <a routerLink="add_product/data" class="tooltiptext">Add New product</a>
+            
+        </div>
 </div>
 
 <div class="row" >
@@ -65,7 +72,7 @@
                         <li> <a><i class="fas fa-tag"></i>{{ad.offers}}</a></li>
                     </ul>
                 </div>
-                <button class="btn btn-primary w-100">double the view</button>
+                <a class="btn btn-primary w-100" routerLink="view">double the view</a>
             </div>
         </div>
         

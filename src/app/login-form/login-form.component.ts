@@ -20,14 +20,17 @@ token?:any
   }
 login(){
  
-  this.loginservice.login(this.user).subscribe(
-      (res)=>{this.logininfo=res;this.token=this.logininfo.Response.access_token;
-        this.cookieService.set( 'token', this.token );
-        console.log(this.token)})
-
-      this.loginservice.whologin( this.res)
-    this.activeroute.navigateByUrl('/home/me');
+  this.loginservice.login(this.user)
+  // .subscribe(
+  //     (res)=>{this.logininfo=res;this.token=this.logininfo.Response.access_token;
+  //      localStorage.setItem( 'token', this.token );
+  //      this.loginservice.token=this.token
+  //      this.activeroute.navigateByUrl('/home');
       
+  //     })
+
+     // this.loginservice.whologin( this.res)
+    
     
   
 }

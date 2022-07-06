@@ -1,9 +1,9 @@
 <ul ngbNav #nav="ngbNav" [(activeId)]="active" class="nav-tabs">
     <li [ngbNavItem]="1">
         <a ngbNavLink>accounts</a>
-        <ng-template ngbNavContent>
-            <swiper [slidesPerView]="3" [spaceBetween]="50" (swiper)="onSwiper($event)" (slideChange)="onSlideChange()">
-                <ng-template swiperSlide *ngFor='let account of accounts let i = index'>
+        <ng-template ngbNavContent class="" >
+            <swiper  [slidesPerView]="3" [spaceBetween]="50" (swiper)="onSwiper($event)" (slideChange)="onSlideChange()">
+                <ng-template  swiperSlide *ngFor='let account of accounts let i = index'>
                     <div class="card plan-card"  [ngClass]="activePlan === i? 'active' : ''" (click)="activePlan = i">
                         <div class="card-header bg-primary">
                             <h4 class='m-0 text-white'>
@@ -24,12 +24,12 @@
                                     <span>remainder ads</span>
                                     <span class='badge badge-light'>{{account.remains}}</span>
                                 </li>
-                                <li class="list-group-item d-flex justify-content-between">
+                                <!-- <li class="list-group-item d-flex justify-content-between">
                                     <span>price </span>
                                     <span class='badge badge-light' *ngIf='account.price==0'>free</span>
              
                                     <span class='badge badge-light' *ngIf='account.price!=0'>{{account.price}}</span>
-                                </li>
+                                </li> -->
                             </ul>
                         </div>
                     </div>
@@ -45,19 +45,19 @@
                 <div class="card-body">
                     <ul class="list-group">
                         <li class="row list-group-item d-flex justify-content-between" *ngFor='let categories of accounts[activePlan].cats'>
-                            <a routerLink="categories" class='col-md-6'>
+                            <a routerLink="categories" class='col-md-12'>
                                 
-                                <div *ngIf='activePlan==0'class='row' >
+                                <div *ngIf='activePlan==0'class='row d-flex justify-content-between' >
                                     <div class='col-md-6' >{{categories.category.name}}
                                     </div>
                                         <span id='span' class='border rounded-circle mx-3 p-1 '>{{categories.ads}}</span>
                                     
                                 </div>
-                                <div *ngIf='activePlan==1'  class='row'>
-                                    <div class='col-md-6' >
+                                <div *ngIf='activePlan!=0'  class='row d-flex justify-content-between'>
+                                    <span class='' >
                                     {{categories.name}}
-                                    </div>
-                                    <span class='border rounded-circle mx-5 p-1'>{{categories.ads}}</span>
+                                    </span>
+                                    <span class='border rounded-circle mx-5 p-1 '>{{categories.ads}}</span>
     
                                 </div>
                                
@@ -74,7 +74,7 @@
     <li [ngbNavItem]="2">
         <a ngbNavLink>categories</a>
         <ng-template ngbNavContent>
-            <swiper [slidesPerView]="3" [spaceBetween]="50" (swiper)="onSwiper($event)" (slideChange)="onSlideChange()">
+            <swiper [slidesPerView]="cats.length" [spaceBetween]="50" (swiper)="onSwiper($event)" (slideChange)="onSlideChange()">
                 <ng-template swiperSlide *ngFor='let cat of cats let i = index' >
                     <div class="card package-card" [ngClass]="activePackage === i ? 'active' : ''" (click)="activePackage = i">
                         <img src="https://dalilisouq.com/{{cat.category.icon}}" class="card-img-top" alt="..." height='200px'>
@@ -162,9 +162,9 @@
             </li>
         </ul>
         <div class='text-center'>
-        <button class="btn btn-sm btn-primary mt-2 rounded">
+        <a class="btn btn-sm btn-primary mt-2 rounded"  routerLink="allcat">
             upgrade now
-        </button>
+        </a>
         </div>
     </div>
 </div>

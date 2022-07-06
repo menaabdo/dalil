@@ -1,3 +1,5 @@
+import { City } from "./city.model";
+
 export interface Address {
     id:number;
     address:string;
@@ -9,6 +11,8 @@ export interface Address {
     landmark:string,
     mobile: string,
     phone: string,
-    lat:string,
-    long:string
+    lat:number,
+    long:number
+    city:City
+    image:string
 }

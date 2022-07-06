@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 
 import { ActivatedRoute, Router } from '@angular/router';
+import { CookieService } from 'ngx-cookie-service';
+import { UserService } from 'src/app/service/user.service';
 
 
 @Component({
@@ -9,12 +11,16 @@ import { ActivatedRoute, Router } from '@angular/router';
   styleUrls: ['./profile-layout.component.scss']
 })
 export class ProfileLayoutComponent implements OnInit {
-route!:any
-  constructor(  private activeroute: ActivatedRoute,private router:Router) { }
+
+  constructor(private userserve:UserService,private cookieserve:CookieService , private activeroute: ActivatedRoute,private router:Router) { }
 
   ngOnInit(): void {
-   this.route= this.router.url
-   console.log(this.route)
+  
+  }
+  logout(){
+   localStorage.removeItem('token')
+   this.router.navigateByUrl('/')
+   
   }
 
 }
