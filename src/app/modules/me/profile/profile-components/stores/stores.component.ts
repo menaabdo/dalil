@@ -17,20 +17,9 @@ term=''
   constructor(private storessserve:UserService,private route:Router) { }
 
   ngOnInit(): void {
-<<<<<<< HEAD
-    console.log(this.term)
-    this.storessserve.mystores('en').subscribe((res)=>{this.response=res;this.stores=this.response.Response})
-  }
-  showme(id:number){
-    this.route.navigateByUrl('/home/me/store/'+id)
-
-  }
-
-=======
     this.storessserve.mystores('en').subscribe((res)=>{this.response=res;this.stores=this.response.Response.stores;console.log(res)})
   }
 delete(id:number){
   this.storessserve.delete_store(id).subscribe((res)=>{console.log(res);  window.location.reload();})
 }
->>>>>>> main
 }
